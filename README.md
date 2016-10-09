@@ -1,4 +1,4 @@
-# Como
+# Lo que le importa está en `/www/js/app.js`
 
 Si quiere correrlo necesitará tener Node.js, una vez tenga node puede instalar Cordova e Ionic así:
 
