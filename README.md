@@ -8,7 +8,7 @@ Después de eso clona el repo y va dentro del proyecto \pruebaConexion y ejecuta
 
 `ionic serve`
 
-**Luego se le abre el proyecto en el navegador pero igual no le va a servir porque no tiene acceso a la red.)
+**Luego se le abre el proyecto en el navegador pero igual no le va a servir porque no tiene acceso a la red.**
 
 Y si llegara a estar en mi red, al no ser un build para celular necesita correr Chrome así:
 1. Por consola, va al directorio donde esta chrome.exe
