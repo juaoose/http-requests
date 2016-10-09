@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' * data: gap: *; style-src 'self' 'unsafe-inline'; media-src *;script-src 'self' * 'unsafe-eval' 'unsafe-inline';">
         <title></title>
         <link href="lib/ionic/css/ionic.css" rel="stylesheet">
         <link rel="stylesheet" href="css/angular-chart.css">
@@ -26,19 +27,17 @@
             </ion-header-bar>
 
             <ion-content padding="true">
-                <form ng-submit="submit()">
-                    <input class="button button-block button-positive" type="submit" name="submit" value="Retrieve">                    
-                </form>
-
+            <ion-refresher on-refresh="doRefresh()">
+            </ion-refresher>
                 <div class="card">
                     <div class="item item-text-wrap">
-                        Respuesta: <b ng-bind="response"></b>
+                        Última alarma: <b ng-bind="response"></b>
                     </div>
                 </div>
             <!-- Graph -->
                 <div class="card">
         <div class="item item-divider">
-            Datos sesión
+            Datos sesión (últimas 10 lecturas)
         </div>
         <div class="item item-text-wrap">
             <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
