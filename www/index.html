@@ -35,12 +35,32 @@
                     </div>
                 </div>
             <!-- Graph -->
-                <div class="card">
-        <div class="item item-divider">
-            Datos sesión (últimas 10 lecturas)
+    <div class="card">
+        <div class="item item-divider" ng-click="click1()">
+            Presión y pulso (últimas 10 lecturas)
         </div>
-        <div class="item item-text-wrap">
-            <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+        <div class="item item-text-wrap" ng-show="stateG1">
+            <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: true, bezierCurve : false}"></canvas>
+        </div>
+    </div>
+    <!-- end graph -->
+            <!-- Graph EMG -->
+    <div class="card">
+        <div class="item item-divider" ng-click="click2()">
+            Electromiografía (últimas lecturas)
+        </div>
+        <div class="item item-text-wrap" ng-show="stateG2">
+            <canvas id="line" class="chart chart-line" data="dataEmg" labels="labels" legend="true" series="seriesEmg" options="{showTooltips: true, bezierCurve : false}"></canvas>
+        </div>
+    </div>
+    <!-- end graph -->
+            <!-- Graph ECG-->
+    <div class="card">
+        <div class="item item-divider" ng-click="click3()">
+            Electrocardiograma (últimas 10 lecturas)
+        </div>
+        <div class="item item-text-wrap" ng-show="stateG3">
+            <canvas id="line" class="chart chart-line" data="dataEcg" labels="labels" legend="true" series="seriesEcg" options="{showTooltips: true, bezierCurve : false}"></canvas>
         </div>
     </div>
     <!-- end graph -->
